@@ -53,6 +53,7 @@ function getData(e) {
 function eliminarSeleccion(idHtml) {
     const index = objetoSeleccionados.findIndex(item => item.id === idHtml);
     if (index !== -1) {
+        document.getElementById(idHtml).innerHTML = '';
         objetoSeleccionados.splice(index, 1);
     }
 }
