@@ -7,12 +7,54 @@
 </head>
 <style>
     .tablero {
-        border: 1px black solid;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        width: 90vmin;
+        height: 90vmin;
     }
 
+    .cuadrado {
+        border: 1px solid black;
+        cursor: pointer;
+     
+    }
+
+    .blanco {
+        background-color: white;
+    }
+
+    .negro {
+        background-color: black;
+    }
+
+    .seleccionado {
+        background-color: red;
+    }
+
+    #guardarBtn {
+        background-color: #4CAF50; 
+        border: none;
+        color: white;
+        padding: 15px 32px; 
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 20px; 
+        cursor: pointer;
+        border-radius: 8px; 
+        transition: background-color 0.3s; 
+    }
+
+    #guardarBtn:hover {
+        background-color: #45a049; 
+    }
 </style>
 <body>
     <div class="tablero" id="tablero"></div>
+    <button id="guardarBtn">Guardar TXT</button>
+
 </body>
 <script src="script.js"></script>
 </html>
